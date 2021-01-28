@@ -232,6 +232,7 @@ pbx_group
         source_tree
         tab_width?
         uses_tabs?
+        wraps_lines?
       '}' ';'
     ;
 
@@ -549,6 +550,10 @@ uses_tabs
 
 platform_filter
     : 'platformFilter' '=' (QUOTED_STRING|NON_QUOTED_STRING) ';'
+    ;
+
+wraps_lines
+    : 'wrapsLines' '=' NUMBER ';'
     ;
 
 children
