@@ -261,9 +261,9 @@ pbx_project
         attributes
         build_configuration_list
         compatibility_version
-        development_region
+        development_region?
         has_scanned_for_encodings
-        known_regions
+        known_regions?
         main_group
         package_references?
         product_ref_group?
@@ -634,7 +634,7 @@ attributes
         last_swift_migration?
         last_swift_update_check?
         build_targets_in_parallel?
-        last_upgrade_check
+        last_upgrade_check?
         last_testing_upgrade_check?
         organization_name?
         target_attributes?
