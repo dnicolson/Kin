@@ -160,7 +160,7 @@ pbx_aggregate_target
         build_phases
         dependencies
         name
-        product_name
+        product_name?
       '}' ';'
     ;
 
@@ -935,9 +935,9 @@ REFERENCE
     : HEX HEX HEX HEX
       HEX HEX HEX HEX
       HEX HEX HEX HEX
-      HEX HEX HEX HEX
-      HEX HEX HEX HEX
-      HEX HEX HEX HEX
+      HEX HEX HEX? HEX?
+      HEX? HEX? HEX? HEX?
+      HEX? HEX? HEX? HEX?
       HEX? HEX? HEX? HEX?
       HEX? HEX? HEX? HEX?
     | ('FR_'|'G_') (HEX)+
