@@ -200,12 +200,14 @@ pbx_file_reference
         explicit_file_type?
         file_encoding?
         include_in_index?
+        indent_width?
         last_known_file_type?
         line_ending?
         name?
         path?
         plist_structure_definition_identifier?
         source_tree?
+        tab_width?
         xc_language_specification_identifier?
         uses_tabs?
       '}' ';'
@@ -297,6 +299,7 @@ pbx_reference_proxy
     : REFERENCE '=' '{'
         isa_pbx_reference_proxy
         file_type
+        name?
         path
         remote_ref
         source_tree
@@ -730,7 +733,7 @@ test_target_id
     ;
 
 development_team
-    : 'DevelopmentTeam' '=' NON_QUOTED_STRING ';'
+    : 'DevelopmentTeam' '=' (QUOTED_STRING|NON_QUOTED_STRING) ';'
     ;
 
 provisioning_style
