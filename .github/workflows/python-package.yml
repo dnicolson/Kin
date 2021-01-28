@@ -35,6 +35,10 @@ jobs:
         with:
           name: grammar
           path: kin/grammar
+      - name: ls 1
+        run: |
+          pwd
+          ls
 
   build:
 
@@ -45,6 +49,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: ls 2
+      run: |
+        pwd
+        ls
     - name: Download grammar
       uses: actions/download-artifact@master
       with:
