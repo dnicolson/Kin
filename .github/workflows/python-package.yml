@@ -26,9 +26,15 @@ jobs:
         working-directory: kin/grammar
         run: |
           java -jar /tmp/antlr-4.6-complete.jar PBXProj.g4 -Dlanguage=Python2
-          mkdir /github/home/grammar
-          cp * /github/home/grammar
-          ls -la /github/home/grammar
+          # mkdir /github/home/grammar
+          # cp * /github/home/grammar
+          ls -la /github
+          ls -la /github/home
+      - name: Upload grammar
+        uses: actions/upload-artifact@master
+        with:
+          name: grammar
+          path: kin/grammar
 
   build:
 
@@ -39,11 +45,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Copy grammar
-      run: |
-        echo "ls grammar in build"
-        ls -la /github/home/grammar
-        cp /github/home/grammar/* kin/grammar
+    - name: Download grammar
+      uses: actions/download-artifact@master
+      with:
+        name: grammar
+        path: kin/grammar
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
