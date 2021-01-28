@@ -158,6 +158,7 @@ pbx_aggregate_target
         isa_pbx_aggregate_target
         build_configuration_list
         build_phases
+        comments?
         dependencies
         name
         product_name?
@@ -647,6 +648,10 @@ build_working_directory
 
 pass_build_settings_in_environment
     : 'passBuildSettingsInEnvironment' '=' NUMBER ';'
+    ;
+
+comments
+    : 'comments' '=' (QUOTED_STRING|NON_QUOTED_STRING) ';'
     ;
 
 dependencies
