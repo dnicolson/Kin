@@ -321,6 +321,7 @@ pbx_resources_build_phase
 pbx_shell_script_build_phase
     : REFERENCE '=' '{'
         isa_pbx_shell_script_build_phase
+        always_out_of_date?
         build_action_mask
         files
         input_file_list_paths?
@@ -596,6 +597,10 @@ path
 
 source_tree
     : 'sourceTree' '=' (QUOTED_STRING|NON_QUOTED_STRING) ';'
+    ;
+
+always_out_of_date
+    : 'alwaysOutOfDate' '=' NUMBER ';'
     ;
 
 build_action_mask
