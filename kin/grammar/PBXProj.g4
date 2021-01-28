@@ -284,7 +284,7 @@ pbx_project
         isa_pbx_project
         attributes?
         build_configuration_list
-        compatibility_version
+        compatibility_version?
         development_region?
         has_scanned_for_encodings
         known_regions?
@@ -293,7 +293,7 @@ pbx_project
         product_ref_group?
         project_dir_path
         project_references?
-        project_root
+        project_root?
         targets
       '}' ';'
     ;
@@ -568,7 +568,7 @@ children
     ;
 
 product_install_path
-    : 'productInstallPath' '=' QUOTED_STRING ';'
+    : 'productInstallPath' '=' (QUOTED_STRING|NON_QUOTED_STRING) ';'
     ;
 
 repository_url
