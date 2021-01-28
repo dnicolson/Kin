@@ -41,7 +41,7 @@ jobs:
           ls
 
   build:
-
+    needs: update_grammar
     runs-on: ubuntu-latest
     strategy:
       matrix:
