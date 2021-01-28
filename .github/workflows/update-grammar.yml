@@ -24,6 +24,8 @@ jobs:
       #     java -jar /tmp/antlr-4.6-complete.jar PBXProj.g4 -Dlanguage=Python2
       - name: Commit any changes without recompiling
         run: |
+          ls -la /github/home/grammar
+          cp /github/home/grammar/* kin/grammar
           git add kin/grammar
           git status
           if [ "$(git status --porcelain)" ]; then
