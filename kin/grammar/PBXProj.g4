@@ -930,6 +930,8 @@ REFERENCE
       HEX HEX HEX HEX
       HEX HEX HEX HEX
       HEX HEX HEX HEX
+      HEX? HEX? HEX? HEX?
+      HEX? HEX? HEX? HEX?
     | ('FR_'|'G_') (HEX)+
     // Carthage references contain non-hex characters
     // This is a problem because if we ever find a name 24 chars long that uses only alpha numeric values with
