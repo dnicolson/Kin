@@ -22,6 +22,11 @@ jobs:
       #   working-directory: kin/grammar
       #   run: |
       #     java -jar /tmp/antlr-4.6-complete.jar PBXProj.g4 -Dlanguage=Python2
+      - name: Download grammar
+        uses: actions/download-artifact@master
+        with:
+          name: grammar
+          path: kin/grammar
       - name: Commit any changes without recompiling
         run: |
           ls -la /github/home/grammar

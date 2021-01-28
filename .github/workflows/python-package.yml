@@ -28,8 +28,8 @@ jobs:
           java -jar /tmp/antlr-4.6-complete.jar PBXProj.g4 -Dlanguage=Python2
           # mkdir /github/home/grammar
           # cp * /github/home/grammar
-          ls -la /github
-          ls -la /github/home
+          # ls -la /github
+          # ls -la /github/home
       - name: Upload grammar
         uses: actions/upload-artifact@master
         with:
