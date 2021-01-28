@@ -40,8 +40,8 @@ objects
         pbx_frameworks_build_phase_section?
         pbx_group_section
         pbx_headers_build_phase_section?
-        pbx_native_target_section?
         pbx_legacy_target_section?
+        pbx_native_target_section?
         pbx_project_section
         pbx_reference_proxy_section?
         pbx_resources_build_phase_section?
@@ -200,6 +200,7 @@ pbx_copy_files_build_phase
 pbx_file_reference
     : REFERENCE '=' '{'
         isa_pbx_file_reference
+        comments?
         explicit_file_type?
         file_encoding?
         include_in_index?
@@ -230,6 +231,7 @@ pbx_group
         isa_pbx_group
         children
         indent_width?
+        include_in_index?
         name?
         path?
         source_tree
@@ -829,7 +831,7 @@ output_paths
     ;
 
 shell_path
-    : 'shellPath' '=' NON_QUOTED_STRING ';'
+    : 'shellPath' '=' (QUOTED_STRING|NON_QUOTED_STRING) ';'
     ;
 
 shell_script
