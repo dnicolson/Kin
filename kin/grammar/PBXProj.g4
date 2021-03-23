@@ -892,7 +892,7 @@ REFERENCE
       HEX HEX HEX HEX
       HEX HEX HEX HEX
       HEX?
-    | ('FR_'|'G_') (HEX)+
+    | ('FR_'|'G_'|'X_') (HEX)+
     // Carthage references contain non-hex characters
     // This is a problem because if we ever find a name 24 chars long that uses only alpha numeric values with
     // capitalized letters, the lexer will find a REFERENCE when in reality we may just need a NON_QUOTED_STRING
