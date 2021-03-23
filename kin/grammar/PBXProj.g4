@@ -162,9 +162,7 @@ pbx_aggregate_target
 pbx_build_file
     : REFERENCE '=' '{'
         isa_pbx_build_file
-        file_ref?
-        platform_filter?
-        product_ref?
+        file_ref
         settings?
       '}' ';'
     ;
@@ -323,7 +321,6 @@ pbx_target_dependency
     : REFERENCE '=' '{'
         isa_pbx_target_dependency
         name?
-        platform_filter?
         target?
         target_proxy
       '}' ';'
@@ -474,10 +471,7 @@ isa_xc_version_group
 
 file_ref
     : 'fileRef' '=' REFERENCE ';'
-    ;
-
-product_ref
-    : 'productRef' '=' REFERENCE ';'
+    | 'productRef' '=' REFERENCE ';'
     ;
 
 container_portal
@@ -522,10 +516,6 @@ tab_width
 
 uses_tabs
     : 'usesTabs' '=' NUMBER ';'
-    ;
-
-platform_filter
-    : 'platformFilter' '=' (QUOTED_STRING|NON_QUOTED_STRING) ';'
     ;
 
 children
