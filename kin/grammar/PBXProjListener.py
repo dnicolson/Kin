@@ -647,15 +647,6 @@ class PBXProjListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by PBXProjParser#product_ref.
-    def enterProduct_ref(self, ctx:PBXProjParser.Product_refContext):
-        pass
-
-    # Exit a parse tree produced by PBXProjParser#product_ref.
-    def exitProduct_ref(self, ctx:PBXProjParser.Product_refContext):
-        pass
-
-
     # Enter a parse tree produced by PBXProjParser#container_portal.
     def enterContainer_portal(self, ctx:PBXProjParser.Container_portalContext):
         pass
@@ -752,15 +743,6 @@ class PBXProjListener(ParseTreeListener):
 
     # Exit a parse tree produced by PBXProjParser#uses_tabs.
     def exitUses_tabs(self, ctx:PBXProjParser.Uses_tabsContext):
-        pass
-
-
-    # Enter a parse tree produced by PBXProjParser#platform_filter.
-    def enterPlatform_filter(self, ctx:PBXProjParser.Platform_filterContext):
-        pass
-
-    # Exit a parse tree produced by PBXProjParser#platform_filter.
-    def exitPlatform_filter(self, ctx:PBXProjParser.Platform_filterContext):
         pass
 
 
@@ -1034,21 +1016,21 @@ class PBXProjListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by PBXProjParser#last_testing_upgrade_check.
-    def enterLast_testing_upgrade_check(self, ctx:PBXProjParser.Last_testing_upgrade_checkContext):
-        pass
-
-    # Exit a parse tree produced by PBXProjParser#last_testing_upgrade_check.
-    def exitLast_testing_upgrade_check(self, ctx:PBXProjParser.Last_testing_upgrade_checkContext):
-        pass
-
-
     # Enter a parse tree produced by PBXProjParser#last_upgrade_check.
     def enterLast_upgrade_check(self, ctx:PBXProjParser.Last_upgrade_checkContext):
         pass
 
     # Exit a parse tree produced by PBXProjParser#last_upgrade_check.
     def exitLast_upgrade_check(self, ctx:PBXProjParser.Last_upgrade_checkContext):
+        pass
+
+
+    # Enter a parse tree produced by PBXProjParser#last_testing_upgrade_check.
+    def enterLast_testing_upgrade_check(self, ctx:PBXProjParser.Last_testing_upgrade_checkContext):
+        pass
+
+    # Exit a parse tree produced by PBXProjParser#last_testing_upgrade_check.
+    def exitLast_testing_upgrade_check(self, ctx:PBXProjParser.Last_testing_upgrade_checkContext):
         pass
 
 
