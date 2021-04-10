@@ -155,7 +155,7 @@ pbx_aggregate_target
         build_phases
         dependencies
         name
-        product_name
+        product_name?
       '}' ';'
     ;
 
